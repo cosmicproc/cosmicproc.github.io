@@ -1,0 +1,23 @@
+.codehilite {
+    border-radius: 1em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: auto;
+}
+
+@media (prefers-color-scheme: light) {
+    {{ highlight_light }}
+
+    .codehilite {
+        background-color: #F0F0F0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    {{ highlight_dark }}
+
+    .codehilite {
+        background-color: #252525;
+    }
+}

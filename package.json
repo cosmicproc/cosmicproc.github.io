@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "dependencies": {
+    "lightningcss-cli": "^1.23.0"
+  }
+}

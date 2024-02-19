@@ -1,0 +1,55 @@
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+    margin-bottom: 2em;
+}
+
+.content h1:first-of-type {
+    text-align: center;
+}
+
+a, a:visited {
+    color: royalblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+    margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    a, a:visited {
+        color: dodgerblue;
+    }
+}
+
+@media screen and (width <= 600px) {
+    .content {
+        width: 90%;
+    }
+}

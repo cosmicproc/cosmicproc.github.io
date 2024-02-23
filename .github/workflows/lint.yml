@@ -1,12 +1,12 @@
 name: Lint
 on:
   push:
-    branches: [$default-branch]
+    branches: [main]
     paths:
       - "**.py"
       - "**.css"
   pull_request:
-    branches: [$default-branch]
+    branches: [main]
     paths:
       - "**.py"
       - "**.css"
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
-          npm ci --include=dev
+          npm ci --ignore-scripts --include=dev
       - name: Run stylelint
         run: |
-          npx stylelint -f github "**/*.css"
+          npx stylelint -f github "static/css/*.css"

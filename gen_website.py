@@ -60,7 +60,8 @@ def main():
     jinja_env.globals["STYLESHEETS"] = list(
         i.relative_to(Paths.OUTPUT) for i in (Paths.OUTPUT / "static/css").glob("*.css"))
 
-    md = markdown.Markdown(extensions=["fenced_code", "codehilite", "smarty", "meta"])
+    md = markdown.Markdown(extensions=["fenced_code", "codehilite", "smarty", "meta", "toc"],
+                           extension_configs={"toc": {"permalink": True}})
 
     # Generate pages
     posts = []

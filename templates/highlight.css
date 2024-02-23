@@ -10,7 +10,7 @@
     {{ highlight_light }}
 
     .codehilite {
-        background-color: #F0F0F0;
+        background-color: #f8f8f8;
     }
 }
 
@@ -18,6 +18,6 @@
     {{ highlight_dark }}
 
     .codehilite {
-        background-color: #252525;
+        background-color: #272822;
     }
 }

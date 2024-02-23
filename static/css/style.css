@@ -18,8 +18,38 @@ body {
     margin-bottom: 2em;
 }
 
+.headerlink {
+    visibility: hidden;
+    color: gray;
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+.headerlink:hover {
+     text-decoration: none;
+}
+
+.headerlink:visited {
+    color: gray;
+}
+
+.content h2:hover .headerlink,
+.content h3:hover .headerlink,
+.content h4:hover .headerlink,
+.content h5:hover .headerlink,
+.content h6:hover .headerlink,
+.content h1:hover .headerlink {
+    visibility: visible;
+}
+
 .content h1:first-of-type {
     text-align: center;
+    padding-bottom: 0.5em;
+    border-bottom: solid gray 2px;
+}
+
+.content h1:first-of-type .headerlink {
+    display: none;
 }
 
 a, a:visited {
@@ -40,7 +70,7 @@ footer {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black;
-        color: whitesmoke;
+        color: white;
     }
 
     a, a:visited {

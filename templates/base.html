@@ -28,12 +28,12 @@
         {% endif %}
     </div>
 </div>
-<footer>
-    {% if not HOME_PAGE %}
+{% if not HOME_PAGE %}
+    <footer>
         <a href="/">Homepage</a>
-    {% endif %}
-    <br>
-    Licensed under <strong>{{ config.CONTENT_LICENSE|safe }}</strong>
-</footer>
+        <br>
+        Licensed under <strong>{{ config.CONTENT_LICENSE|safe }}</strong>
+    </footer>
+{% endif %}
 </body>
 </html>

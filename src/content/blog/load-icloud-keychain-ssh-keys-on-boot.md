@@ -1,4 +1,6 @@
-Title: Automatically Load SSH Keys from iCloud Keychain on Boot
+---
+title: Automatically Load SSH Keys from iCloud Keychain on Boot
+---
 
 You can add your SSH key into iCloud Keychain with the command below:
 

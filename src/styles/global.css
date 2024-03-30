@@ -1,0 +1,61 @@
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+p,
+li {
+    font-size: 1.05em;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    padding: 1em;
+    border-radius: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+    margin-top: auto;
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    a,
+    a:visited {
+        color: dodgerblue;
+    }
+}
+
+@media screen and (width <= 600px) {
+    main {
+        width: 85%;
+    }
+}

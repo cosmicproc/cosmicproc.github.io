@@ -1,0 +1,49 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'));
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<style>
+			.cosmic {
+				background: linear-gradient(to left, royalblue, darkviolet);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		</style>
+		<main>
+			<h1><span class="cosmic"><code>cosmicproc</code></span>'s Website</h1>
+			<p>
+				Hi! This is <code>cosmicproc</code>'s website. You can see my <a href="https://github.com/cosmicproc/">GitHub Profile</a> if you are
+				interested. You can also find the source of this website
+				in the <a href="https://github.com/cosmicproc/cosmicproc.github.io">cosmicproc.github.io</a> repository. I am
+				a computer enthusiast. My current interests are Python, JavaScript/TypeScript, and web development.
+			</p>
+			<section>
+				<h2>Posts</h2>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.slug}/`}>
+									<b class="title">{post.data.title}</h>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
